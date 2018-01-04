@@ -3,14 +3,14 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const FooterWrapper = styled.footer`
-  background: #fafafa;
-  color: rgba(0, 0, 0, 0.7);
-  border-top: 1px solid #f2f2f2;
+  background: #000000;
+  color: #ebf74e;
+  border-top: 1px solid #ebf74e;
   padding: 40px;
 `
 
 const CopyRight = styled.h3`
-  color: rgba(0, 0, 0, 0.7);
+  color: #ebf74e;
   text-align: center;
   font-weight: 400;
   font-size: 0.9em;
@@ -21,7 +21,7 @@ const CopyRight = styled.h3`
 
 const Footer = () => (
   <FooterWrapper>
-    <CopyRight>&copy; {new Date().getYear() + 1900} Project Name</CopyRight>
+    <CopyRight>&copy; {new Date().getYear() + 1900} Zur goldenen Citröene</CopyRight>
   </FooterWrapper>
 )
 

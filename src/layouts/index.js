@@ -20,6 +20,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Wrapper>
       <Header />
+
       <Main>{children()}</Main>
       <Footer />
     </Wrapper>
