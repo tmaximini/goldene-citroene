@@ -12,7 +12,7 @@ import '../styles/index.scss'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Thomas Maximini"
+      title="Zur goldenen Citröne"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' }

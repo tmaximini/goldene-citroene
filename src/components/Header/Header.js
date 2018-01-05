@@ -6,7 +6,7 @@ import logoText from './logo.png'
 import zitrone from './zitrone.png'
 
 const HeaderWrapper = styled.header`
-  height: 100px;
+  height: 110px;
   width: 100%;
   background-color: #000000;
   position: fixed;
@@ -14,7 +14,7 @@ const HeaderWrapper = styled.header`
   left: 0;
   z-index: 99;
   @media screen and (min-width: 375px) {
-    height: 140px;
+    height: 150px;
   }
 `
 
@@ -61,13 +61,18 @@ const LogoImg = styled.img`
 
 const Zitrone = styled.img`
   height: 40px;
+  display: none;
   animation: spin 4s linear infinite;
+  position: absolute;
+  right: 50px;
+  top: 20px;
   @media screen and (min-width: 375px) {
     height: 80px;
+    display: inline-block;
   }
   @keyframes spin {
     100% {
-      transform: rotate(360deg) scale(1.5);
+      transform: rotate(360deg);
     }
   }
 `
