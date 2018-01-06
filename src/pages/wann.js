@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Section from '../components/Section/Section'
 import ContentArea from '../components/ContentArea/ContentArea'
-import soup from '../images/soup.png'
+import truck2 from '../images/truck3.jpg'
 import pancakes from '../images/pancakes.png'
 
-const IndexPage = () => (
+const WannPage = () => (
   <Section>
-    <ContentArea headline="Willkommen" image={soup} reverse />
-    <ContentArea headline="Der Truck" image={pancakes} />
+    <ContentArea headline="Nächste Termin" image={truck2} reverse />
+    <ContentArea headline="Regelmässige Termine" image={pancakes} />
   </Section>
 )
 
-export default IndexPage
+export default WannPage

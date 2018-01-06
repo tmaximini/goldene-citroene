@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
 const Nav = styled.nav`
   height: 30px;
   background-color: black;
-  color: #fc00ff;
 
   ul {
     margin: 0;
@@ -21,6 +21,11 @@ const Nav = styled.nav`
       font-size: 1.1em;
       font-weight: bold;
 
+      a {
+        color: #fc00ff;
+        text-decoration: none;
+      }
+
       @media screen and (min-width: 375px) {
         font-size: 1.4em;
         padding: 0 10px 10px 10px;
@@ -29,14 +34,40 @@ const Nav = styled.nav`
   }
 `
 
+Link.defaultProps = {
+  activeStyle: {
+    textDecoration: 'underline'
+  }
+}
+
 const NavBar = () => (
   <Nav>
     <ul>
-      <li>Über uns</li>
-      <li>Menu</li>
-      <li>Wann / Wo</li>
-      <li>Catering</li>
-      <li>Kontakt</li>
+      <li>
+        <Link to="/" exact>
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="/menu" exact>
+          Menu
+        </Link>
+      </li>
+      <li>
+        <Link to="/wann" exact>
+          Wann / Wo
+        </Link>
+      </li>
+      <li>
+        <Link to="/catering" exact>
+          Catering
+        </Link>
+      </li>
+      <li>
+        <Link to="/kontakt" exact>
+          Kontakt
+        </Link>
+      </li>
     </ul>
   </Nav>
 )

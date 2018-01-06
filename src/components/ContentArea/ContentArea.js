@@ -1,19 +1,20 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Headline from '../Headline/Headline'
 
 const ContentAreaWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  flex-direction: ${props => (props.rev ? 'row-reverse' : 'row')}
+  flex-direction: ${props => (props.rev ? 'row' : 'row-reverse')};
 
   &::after {
     content: '';
     background: ${props => `url(${props.src})`} center center no-repeat;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.4;
     top: 0;
     left: 0;
     bottom: 0;
@@ -33,14 +34,14 @@ const Text = styled.div`
   text-align: left;
 `
 
-const ContentArea = ({ image, reverse = false }) => (
+const ContentArea = ({ image, reverse = false, content = '', headline }) => (
   <ContentAreaWrapper rev={reverse} src={image}>
     <Image50 />
     <Text>
+      {headline && <Headline text={headline} />}
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis, dolores praesentium nisi
-        maiores commodi iure quia culpa at, eveniet fugit asperiores dignissimos laborum. Saepe
-        iusto reprehenderit labore aut veritatis.
+        {content ||
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor expedita provident possimus debitis harum aperiam error nisi repudiandae ipsam est tempore iste vero velit distinctio, labore neque eveniet blanditiis quia?'}
       </p>
     </Text>
   </ContentAreaWrapper>
