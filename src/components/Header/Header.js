@@ -14,6 +14,9 @@ const HeaderWrapper = styled.header`
   left: 0;
   z-index: 99;
   @media screen and (min-width: 375px) {
+    height: 140px;
+  }
+  @media screen and (min-width: 520px) {
     height: 150px;
   }
 `

@@ -27,8 +27,10 @@ const Nav = styled.nav`
       }
 
       @media screen and (min-width: 375px) {
+      }
+      @media screen and (min-width: 520px) {
         font-size: 1.4em;
-        padding: 0 10px 10px 10px;
+        #padding: 0 10px 5px 10px;
       }
     }
   }
