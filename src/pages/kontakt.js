@@ -2,18 +2,44 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Section from '../components/Section/Section'
 import ContentArea from '../components/ContentArea/ContentArea'
-import truck from '../images/truck1.jpg'
 
-const KontaktPage = () => (
-  <Section>
-    <ContentArea
-      headline="Kontakt"
-      image={truck}
-      content={`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor expedita provident possimus debitis harum aperiam error nisi repudiandae ipsam est tempore iste vero velit distinctio, labore neque eveniet blanditiis quia?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor expedita provident possimus debitis harum aperiam error nisi repudiandae ipsam est tempore iste vero velit distinctio, labore neque eveniet blanditiis quia?
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor expedita provident possimus debitis harum aperiam error nisi repudiandae ipsam est tempore iste vero velit distinctio, labore neque eveniet blanditiis quia?`}
-    />
-  </Section>
-)
+const KontaktPage = ({ data }) => {
+  const { edges: content } = data.allMarkdownRemark
+  console.info({ content })
+  return (
+    <Section>
+      {content.map(item => (
+        <ContentArea
+          headline={item.node.frontmatter.title}
+          image={item.node.frontmatter.img}
+          content={item.node.html}
+        />
+      ))}
+    </Section>
+  )
+}
 
 export default KontaktPage
+
+export const kontaktQuery = graphql`
+  query kontaktContent {
+    allMarkdownRemark(filter: { frontmatter: { page: { eq: "kontakt" } } }) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            img {
+              childImageSharp {
+                sizes(maxWidth: 1200) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
