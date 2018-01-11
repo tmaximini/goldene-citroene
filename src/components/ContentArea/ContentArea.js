@@ -6,11 +6,14 @@ import Headline from '../Headline/Headline'
 
 const ContentAreaWrapper = styled.div`
   display: flex;
+  flex-grow: 1;
+  z-index: 2;
   justify-content: center;
   align-items: center;
   position: relative;
   flex-direction: ${props => (props.rev ? 'row' : 'row-reverse')};
-
+  overflow: hidden;
+  flex-grow: 1;
   &::after {
     content: '';
     background: ${props => `url(${props.src})`} center center no-repeat;

@@ -23,6 +23,7 @@ const HeaderWrapper = styled.header`
 
 const Inner = styled.div`
   display: flex;
+  position: relative;
   height: 90px;
   align-items: center;
   justify-content: space-around;
@@ -54,7 +55,7 @@ const LogoImg = styled.img`
   width: auto;
   margin: 0;
   max-width: auto;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   @media screen and (min-width: 375px) {
@@ -93,8 +94,8 @@ const Header = () => (
         <LogoImg src={logoText} alt="logo" />
       </Logo>
       <Zitrone src={zitrone} />
+      <NavBar />
     </Inner>
-    <NavBar />
   </HeaderWrapper>
 )
 
