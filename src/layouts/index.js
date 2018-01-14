@@ -14,8 +14,8 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Zur goldenen Citröne"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' }
+        { name: 'description', content: 'Zur golden Citröene - Berlin Foodtruck' },
+        { name: 'keywords', content: 'Foodtruck, Oldtimer, Citröen, Berlin, Crepes, Food' }
       ]}
     />
     <Wrapper>
