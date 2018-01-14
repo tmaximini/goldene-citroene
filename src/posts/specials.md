@@ -1,5 +1,5 @@
 ---
-title: 'Menü'
+title: 'Specials'
 page: 'menu'
 lang: 'de'
 img: './specials.jpg'
