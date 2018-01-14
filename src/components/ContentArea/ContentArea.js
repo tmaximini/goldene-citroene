@@ -14,54 +14,61 @@ const ContentAreaWrapper = styled.div`
   flex-direction: ${props => (props.rev ? 'row' : 'row-reverse')};
   overflow: hidden;
   flex-grow: 1;
-  &::after {
-    content: '';
-    background: ${props => `url(${props.src})`} center center no-repeat;
-    background-size: cover;
-    opacity: 0.4;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
 `
 
 const Image50 = styled.div`
   flex: 1 0 auto;
+  display: none;
+  padding: 20px;
+  @media screen and (min-width: 736px) {
+    display: block;
+  }
 `
 
 const Text = styled.div`
-  width: 70%;
-  padding: 20px;
+  width: 100%;
   text-align: left;
+  padding: 20px;
+  @media screen and (min-width: 736px) {
+    width: 60%;
+  }
 `
 
 const BGImage = styled.div`
-  opacity: 0.4;
+  opacity: 0.3;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
+  background-image: url(${props => props.src});
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center top;
   z-index: -1;
-  img {
-    height: 100%;
+  @media screen and (min-width: 470px) {
+    background-size: 100% auto;
+  }
+  @media screen and (min-width: 736px) {
+    display: none;
   }
 `
 
-const ContentArea = ({ image, reverse = false, content = '', headline }) => (
-  <ContentAreaWrapper rev={reverse}>
-    <BGImage>
-      <Image sizes={image.childImageSharp.sizes} />
-    </BGImage>
-    <Image50 />
-    <Text>
-      {headline && <Headline text={headline} />}
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </Text>
-  </ContentAreaWrapper>
-)
+const ContentArea = ({ image, reverse = false, content = '', headline }) => {
+  console.info({ image })
+
+  return (
+    <ContentAreaWrapper rev={reverse}>
+      <BGImage src={image.childImageSharp.sizes.src} />
+      <Image50>
+        <Image sizes={image.childImageSharp.sizes} />
+      </Image50>
+      <Text>
+        {headline && <Headline text={headline} />}
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+      </Text>
+    </ContentAreaWrapper>
+  )
+}
 
 export default ContentArea

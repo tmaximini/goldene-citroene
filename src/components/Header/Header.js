@@ -13,7 +13,7 @@ const HeaderWrapper = styled.header`
   top: 0;
   left: 0;
   z-index: 99;
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 480px) {
     height: 140px;
   }
   @media screen and (min-width: 520px) {
@@ -24,13 +24,16 @@ const HeaderWrapper = styled.header`
 const Inner = styled.div`
   display: flex;
   position: relative;
-  height: 90px;
+  height: 110px;
   align-items: center;
   justify-content: space-around;
   max-width: 62em;
   margin: 0 auto;
-  @media screen and (min-width: 375px) {
-    height: 110px;
+  @media screen and (min-width: 480px) {
+    height: 140px;
+  }
+  @media screen and (min-width: 520px) {
+    height: 150px;
   }
 `
 
@@ -58,7 +61,7 @@ const LogoImg = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 480px) {
     height: 120px;
   }
 `
@@ -70,7 +73,7 @@ const Zitrone = styled.img`
   position: absolute;
   right: 50px;
   top: 20px;
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 480px) {
     height: 80px;
     display: inline-block;
   }

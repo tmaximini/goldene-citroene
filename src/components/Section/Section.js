@@ -6,6 +6,8 @@ const Section = styled.section`
   background-color: #ffffff;
   max-width: 62em;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 `
 

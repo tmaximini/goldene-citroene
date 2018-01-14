@@ -9,7 +9,7 @@ const Main = styled.main`
   max-width: 62em;
   width: 100%;
   margin: 0 auto;
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 480px) {
     padding: 140px 0 0 0;
   }
 `

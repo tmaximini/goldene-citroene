@@ -5,14 +5,15 @@ import ContentArea from '../components/ContentArea/ContentArea'
 
 const KontaktPage = ({ data }) => {
   const { edges: content } = data.allMarkdownRemark
-  console.info({ content })
   return (
     <Section>
-      {content.map(item => (
+      {content.map((item, index) => (
         <ContentArea
+          key={item.node.id}
           headline={item.node.frontmatter.title}
           image={item.node.frontmatter.img}
           content={item.node.html}
+          reverse={(index + 1) % 2 === 0}
         />
       ))}
     </Section>

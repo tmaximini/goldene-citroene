@@ -2,7 +2,7 @@
 title: 'Kontakt'
 page: 'kontakt'
 lang: 'de'
-img: './soup.png'
+img: './truck2.jpg'
 ---
 
 Zur Goldenen Citroene GbR

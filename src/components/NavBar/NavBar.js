@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 const Nav = styled.nav`
-  height: 30px;
   background-color: black;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 
   ul {
     margin: 0;
@@ -17,6 +19,7 @@ const Nav = styled.nav`
     li {
       display: inline;
       padding: 0 5px;
+      margin: 0;
       font-family: 'Amatic SC', cursive;
       font-size: 1.1em;
       font-weight: bold;
@@ -26,11 +29,9 @@ const Nav = styled.nav`
         text-decoration: none;
       }
 
-      @media screen and (min-width: 375px) {
-      }
       @media screen and (min-width: 520px) {
         font-size: 1.4em;
-        #padding: 0 10px 5px 10px;
+        padding: 0 10px;
       }
     }
   }

@@ -2,7 +2,7 @@
 title: 'Nächste Termine'
 page: 'wann'
 lang: 'de'
-img: './soup.png'
+img: './truck1.jpg'
 ---
 
 Wir werden Sie über unsere kommenden Veranstaltungen informieren
