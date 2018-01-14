@@ -43,32 +43,25 @@ const BGImage = styled.div`
   position: absolute;
   background-image: url(${props => props.src});
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: center top;
+  background-size: cover;
+  background-position: center;
   z-index: -1;
-  @media screen and (min-width: 360px) {
-    background-size: 100% auto;
-  }
   @media screen and (min-width: 736px) {
     display: none;
   }
 `
 
-const ContentArea = ({ image, reverse = false, content = '', headline }) => {
-  console.info({ image })
-
-  return (
-    <ContentAreaWrapper rev={reverse}>
-      <BGImage src={image.childImageSharp.sizes.src} />
-      <Image50>
-        <Image sizes={image.childImageSharp.sizes} />
-      </Image50>
-      <Text>
-        {headline && <Headline text={headline} />}
-        <div dangerouslySetInnerHTML={{ __html: content }} />
-      </Text>
-    </ContentAreaWrapper>
-  )
-}
+const ContentArea = ({ image, reverse = false, content = '', headline }) => (
+  <ContentAreaWrapper rev={reverse}>
+    <BGImage src={image.childImageSharp.sizes.src} />
+    <Image50>
+      <Image sizes={image.childImageSharp.sizes} />
+    </Image50>
+    <Text>
+      {headline && <Headline text={headline} />}
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </Text>
+  </ContentAreaWrapper>
+)
 
 export default ContentArea
