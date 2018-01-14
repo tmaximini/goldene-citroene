@@ -46,7 +46,7 @@ const BGImage = styled.div`
   background-size: auto 100%;
   background-position: center top;
   z-index: -1;
-  @media screen and (min-width: 470px) {
+  @media screen and (min-width: 360px) {
     background-size: 100% auto;
   }
   @media screen and (min-width: 736px) {
