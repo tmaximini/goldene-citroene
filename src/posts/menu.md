@@ -3,6 +3,7 @@ title: 'Menü'
 page: 'menu'
 lang: 'de'
 img: './pancakes.png'
+type: 'post'
 ---
 
 Unsere Crepes und Galettes sind gefüllt mit frischen Zutaten: Wir lieben guten Käse/Fisch/Knackige Salate und Gemüse/Früchte/spanischen Schinken/und saisonales Essen.

@@ -3,6 +3,7 @@ title: 'Specials'
 page: 'menu'
 lang: 'de'
 img: './specials.jpg'
+type: 'post'
 ---
 
 Wir haben eine riesen Auswahl von leckeren Suppen. Von traditionellen Klassikern wie Linsen Suppe/Kartoffel Cremesuppe oder Goulasch und Chilli Con Carne für den herzhaften Geschmack. Wir können alles bieten von div. Currys bis zu Veganen/Veggie.

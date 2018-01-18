@@ -12,6 +12,13 @@ module.exports = {
         path: `${__dirname}/src/posts/`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `statics`,
+        path: `${__dirname}/src/statics/`
+      }
+    },
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',

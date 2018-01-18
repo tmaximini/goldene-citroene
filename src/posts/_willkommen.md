@@ -3,6 +3,7 @@ title: 'Willkommen'
 page: 'home'
 lang: 'de'
 img: './truck2.jpg'
+type: 'post'
 ---
 
 Möchten sie sich selbst eine Freude machen (nicht nur ihnen selbst ..evtl. auch ihrer Familie/Angestellten/Kindern oder jedem anderen Menschlichen und anderen Lebewesen) sind sie hier an der richtigen Adresse!

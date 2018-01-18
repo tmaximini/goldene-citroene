@@ -3,6 +3,7 @@ title: 'Der Truck'
 page: 'home'
 lang: 'de'
 img: './truck4.jpg'
+type: 'post'
 ---
 
 Der Stylische Old-timer Citroen HY (Baujahr 1977) ist bereit sich für Sie in Bewegung zu setzen um ihrem Event etwas besonderes zu verleihen.
