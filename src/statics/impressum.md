@@ -9,8 +9,8 @@ Angaben gemäß § 5 TMG
 
 Johanna Cerna, Daniel Oppermann
 
-Altenbraker Str. 8
-12051 Berlin
+Altenbraker Str. 6
+12053 Berlin
 
 Vertreten durch:
 Johanna Cerna,
